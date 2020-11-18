@@ -35,8 +35,16 @@ ssh -i #your_public_key student@sdnfp04
 vim .ssh/authorized_key
 ```
 
-# 一次搞定
-新增.ssh/config
+# 一勞永逸、一通百通
+
+新增公鑰讓連到ipvs機器以後都不需要密碼
+```
+ssh-copy-id liku@ipvslogin.informatik.uni-stuttgart.de
+```
+
+接著系統會要求你輸入ipvs密碼，連進去之後就直接會是sdnfp04
+
+新增.ssh/config讓ssh可以透過ipvslogin當作proxy直接連到sdnfp04
 ```
 Host sdnfp04_proxy
         HostName sdnfp04
@@ -50,20 +58,24 @@ Host proxy
         ForwardAgent yes
         ForwardX11 yes
 ```
-在.ssh/下執行ssh，直接登入，接著系統會要求你輸入ipvs密碼，連進去之後就直接會是sdnfp04
+在.ssh/下執行ssh，直接登入，
 ```
 ssh sdnfp04_proxy
 ```
-設定ipvs
+mount遠端硬碟設定
 ```
 sshfs sdnfp04_proxy:/home/student/ex1 remote_sshfs_ex1
+```
+不需要使用的時候
+```
+unmount remote_sshfs_ex1
 ```
 
 # Open Issue
 - 必須透過代理連到sdnfp04, 如何直接sshfs將遠端硬碟mount上來
 - [https://www.ssh.com/ssh/config/][2] 
 - LAN vs. VLAN
-- waiting for password to access VM
+- ~~waiting for password to access VM~~
 
 - 你該知道所有關於 SSH 的那些事 [https://jennycodes.me/posts/security-ssh][1]
 
