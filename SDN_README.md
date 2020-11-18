@@ -30,6 +30,10 @@ ssh -i #your_public_key student@sdnfp04
 ```
 
 3. 成功使用公鑰登入！
+成功授權的公鑰是放在authorized_key這個檔案裡面，打開就可以檢視
+```
+vim .ssh/authorized_key
+```
 
 # Open Issue
 - 必須透過代理連到sdnfp04, 如何直接sshfs將遠端硬碟mount上來
