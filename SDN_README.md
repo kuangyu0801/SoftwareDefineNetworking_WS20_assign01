@@ -9,12 +9,12 @@
 
 # Task1.4
 
-# VPN
+# 如何連到機器（簡單）
 
 0 只需要做一次) 
 用sshfs把自己本機的公鑰放到ipvslogin的遠端server裡面
 ```
-sshfs liku@ipvslogin.informatik.uni-stuttgart.de:\home\liku \remote_sshfs
+sshfs liku@ipvslogin.informatik.uni-stuttgart.de:\home\liku remote_sshfs
 ```
 
 1. 不用連到informatik也可以
@@ -35,6 +35,29 @@ ssh -i #your_public_key student@sdnfp04
 vim .ssh/authorized_key
 ```
 
+# 一次搞定
+新增.ssh/config
+```
+Host sdnfp04_proxy
+        HostName sdnfp04
+        User student
+        ForwardAgent yes
+        ForwardX11 yes
+        ProxyJump proxy
+Host proxy
+        HostName ipvslogin.informatik.uni-stuttgart.de
+        User liku
+        ForwardAgent yes
+        ForwardX11 yes
+```
+在.ssh/下執行ssh，直接登入，接著系統會要求你輸入ipvs密碼，連進去之後就直接會是sdnfp04
+```
+ssh sdnfp04_proxy
+```
+設定ipvs
+```
+sshfs sdnfp04_proxy:/home/student/ex1 remote_sshfs_ex1
+```
 
 # Open Issue
 - 必須透過代理連到sdnfp04, 如何直接sshfs將遠端硬碟mount上來
