@@ -1,4 +1,6 @@
 
+
+
 # Task1.1
 
 # Task1.2
@@ -7,6 +9,30 @@
 
 # Task1.4
 
+# VPN
+
+0 只需要做一次) 
+用sshfs把自己本機的公鑰放到ipvslogin的遠端server裡面
+```
+sshfs liku@ipvslogin.informatik.uni-stuttgart.de:\home\liku \remote_sshfs
+```
+
+1. 不用連到informatik也可以
+```
+ssh liku@ipvslogin.informatik.uni-stuttgart.de
+```
+接著輸入系統要求的密碼
+
+2. 從ipvslogin跳到sdnfp04.infra.informatik.uni-stuttgart.de
+
+```
+ssh -i #your_public_key student@sdnfp04
+```
+
+3. 成功使用公鑰登入！
+
 # Open Issue
+- 必須透過代理連到sdnfp04, 如何直接sshfs將遠端硬碟mount上來
 - LAN vs. VLAN
 - waiting for password to access VM
+
