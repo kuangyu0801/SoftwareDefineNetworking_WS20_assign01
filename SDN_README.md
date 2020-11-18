@@ -35,8 +35,14 @@ ssh -i #your_public_key student@sdnfp04
 vim .ssh/authorized_key
 ```
 
+
 # Open Issue
 - 必須透過代理連到sdnfp04, 如何直接sshfs將遠端硬碟mount上來
+- [https://www.ssh.com/ssh/config/][2] 
 - LAN vs. VLAN
 - waiting for password to access VM
 
+- 你該知道所有關於 SSH 的那些事 [https://jennycodes.me/posts/security-ssh][1]
+
+[1]: https://jennycodes.me/posts/security-ssh
+[2]: https://www.ssh.com/ssh/config/
