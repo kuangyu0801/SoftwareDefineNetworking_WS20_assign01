@@ -2,10 +2,13 @@
 
 
 # Task1.1
+- ping代表什麼意思？
+three pings from host 1 to host 2
 
 # Task1.2
 
 # Task1.3 Extended VLANs
+- LAN vs. VLAN
 
 
 # Task1.4 Python API and ARP Caches
@@ -80,8 +83,16 @@ ssh -i #your_public_key student@sdnfp04
 vim .ssh/authorized_key
 ```
 
+# Note
+- XTerm terminal(配合x2go使用)
+- dump right away
+
+
+# Reference
+- Introduction to MiniNet [https://github.com/mininet/mininet/wiki/Introduction-to-Mininet#what][3]
+- 鳥哥的基礎網路觀念: [http://linux.vbird.org/linux_server/0110network_basic.php#tcpip_network_arp][4]
 # Open Issue
-- 必須透過代理連到sdnfp04, 如何直接sshfs將遠端硬碟mount上來
+
 - [https://www.ssh.com/ssh/config/][2] 
 - LAN vs. VLAN
 - ~~waiting for password to access VM~~
@@ -90,3 +101,6 @@ vim .ssh/authorized_key
 
 [1]: https://jennycodes.me/posts/security-ssh
 [2]: https://www.ssh.com/ssh/config/
+[3]: https://github.com/mininet/mininet/wiki/Introduction-to-Mininet#what
+
+[4]: http://linux.vbird.org/linux_server/0110network_basic.php#tcpip_network_arp
