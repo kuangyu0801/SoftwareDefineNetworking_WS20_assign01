@@ -70,7 +70,7 @@ sshfs sdnfp04_proxy:/home/student/ex1 remote_sshfs_ex1
 ```
 unmount remote_sshfs_ex1
 ```
-![avatar](/x2go.png)
+![avatar](/picture/x2go.png)
 # Open Issue
 - 必須透過代理連到sdnfp04, 如何直接sshfs將遠端硬碟mount上來
 - [https://www.ssh.com/ssh/config/][2] 
