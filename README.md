@@ -9,33 +9,9 @@
 
 # Task1.4
 
-# 如何連到機器（簡單）
+# 如何連到機器
 
-0 只需要做一次) 
-用sshfs把自己本機的公鑰放到ipvslogin的遠端server裡面
-```
-sshfs liku@ipvslogin.informatik.uni-stuttgart.de:\home\liku remote_sshfs
-```
-
-1. 不用連到informatik也可以
-```
-ssh liku@ipvslogin.informatik.uni-stuttgart.de
-```
-接著輸入系統要求的密碼
-
-2. 從ipvslogin跳到sdnfp04.infra.informatik.uni-stuttgart.de
-
-```
-ssh -i #your_public_key student@sdnfp04
-```
-
-3. 成功使用公鑰登入！
-成功授權的公鑰是放在authorized_key這個檔案裡面，打開就可以檢視
-```
-vim .ssh/authorized_key
-```
-
-# 一勞永逸、一通百通
+## 方法一(推薦）：直接設定ssh搭配sshfs(一勞永逸)
 
 新增公鑰讓連到ipvs機器以後都不需要密碼
 ```
@@ -70,7 +46,38 @@ sshfs sdnfp04_proxy:/home/student/ex1 remote_sshfs_ex1
 ```
 unmount remote_sshfs_ex1
 ```
+## 方法二：透過X2G0
+- x2go設定
+![avatar](/picture/x2go_config.png)
+- 成功登入畫面
 ![avatar](/picture/x2go.png)
+
+## 方法三（基本）：兩次ssh（一通百通）
+
+0. 只需要做一次) 
+用sshfs把自己本機的公鑰放到ipvslogin的遠端server裡面
+```
+sshfs liku@ipvslogin.informatik.uni-stuttgart.de:\home\liku remote_sshfs
+```
+
+1. 不用連到informatik也可以
+```
+ssh liku@ipvslogin.informatik.uni-stuttgart.de
+```
+接著輸入系統要求的密碼
+
+2. 從ipvslogin跳到sdnfp04.infra.informatik.uni-stuttgart.de
+
+```
+ssh -i #your_public_key student@sdnfp04
+```
+
+3. 成功使用公鑰登入！
+成功授權的公鑰是放在authorized_key這個檔案裡面，打開就可以檢視
+```
+vim .ssh/authorized_key
+```
+
 # Open Issue
 - 必須透過代理連到sdnfp04, 如何直接sshfs將遠端硬碟mount上來
 - [https://www.ssh.com/ssh/config/][2] 
