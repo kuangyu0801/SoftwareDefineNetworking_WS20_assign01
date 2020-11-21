@@ -91,11 +91,14 @@ vim .ssh/authorized_key
 # Reference
 - Introduction to MiniNet [https://github.com/mininet/mininet/wiki/Introduction-to-Mininet#what][3]
 - 鳥哥的基礎網路觀念: [http://linux.vbird.org/linux_server/0110network_basic.php#tcpip_network_arp][4]
+- mini net workthrough http://mininet.org/walkthrough/
+- Dpctl Documentation https://github.com/CPqD/ofsoftswitch13/wiki/Dpctl-Documentation
 # Open Issue
 
 - [https://www.ssh.com/ssh/config/][2] 
 - LAN vs. VLAN
 - ~~waiting for password to access VM~~
+- mini net支持
 
 - 你該知道所有關於 SSH 的那些事 [https://jennycodes.me/posts/security-ssh][1]
 
