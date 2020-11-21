@@ -107,3 +107,10 @@ vim .ssh/authorized_key
 [3]: https://github.com/mininet/mininet/wiki/Introduction-to-Mininet#what
 
 [4]: http://linux.vbird.org/linux_server/0110network_basic.php#tcpip_network_arp
+
+sudo mn --mac --switch ovsk --controller remote,port=6653 --custom ex1/task12topo.py --topo task12topo
+dpctl dump-flows
+
+- install之後就算是mn clean up 
+# linux command
+- arp
