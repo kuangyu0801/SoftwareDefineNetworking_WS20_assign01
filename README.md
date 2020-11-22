@@ -10,7 +10,7 @@ Ping operates by sending **Internet Control Message Protocol (ICMP)** echo reque
 three pings from host 1 to host 2
 
 # Task1.2
-- 
+- 如果arp廣播的src本身不在接收到的host arp table裡面, 就不會self learning
 
 # Task1.3 Extended VLANs
 - 這題不是要我們去實作arp，也不要我們利用vlan去控制封包轉法(因為h3, h4會在同一個網域,flooding會有問題！)
