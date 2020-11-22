@@ -2,7 +2,11 @@
 
 
 # Task1.1
-- ping代表什麼意思？
+- ping代表什麼意思？實際執行的是什麼?
+Ping operates by sending **Internet Control Message Protocol (ICMP)** echo request packets to the target host and waiting for an **ICMP echo reply**. 
+
+- what is ICMP?
+
 three pings from host 1 to host 2
 
 # Task1.2
@@ -12,8 +16,18 @@ three pings from host 1 to host 2
 - 必須先執行, 才能install flow with REST-API
 /opt/floodlight/floodlight-noforwarding.sh
 
-# Task1.4 Python API and ARP Caches
 - ARP是屬於哪一層的？L2
+- EtherType is a two-octet field in an Ethernet frame. It is used to indicate which **protocol is encapsulated** in the **payload of the frame** and is used at the receiving end by the **data link layer** to determine how the payload is processed. The same field is also used to indicate the size of some Ethernet frames.
+用來表示frame裡面的payload的type
+  * 0x0800	Internet Protocol version 4 (IPv4) : ping packet是屬於這個！
+  * 0x0806:	Address Resolution Protocol (ARP)
+  * 0x86DD	Internet Protocol Version 6 (IPv6)
+  
+# Task1.4 Python API and ARP Caches
+mininet.net.Mininet.staticArp()
+Add all-pairs ARP entries to remove the need to handle broadcast.
+
+
 
 # 如何連到機器
 
