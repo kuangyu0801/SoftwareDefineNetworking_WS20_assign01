@@ -16,6 +16,8 @@ curl -X POST -d '{"switch":"00:00:00:00:00:00:00:02", "name":"s2-src-h2-dst-h3",
 curl -X POST -d '{"switch":"00:00:00:00:00:00:00:02", "name":"s2-src-h2-dst-h4", "eth_src":"00:00:00:00:00:02", "eth_dst":"00:00:00:00:00:04", "active":"true", "actions":"output=2"}' http://localhost:8080/wm/staticentrypusher/json
 curl -X POST -d '{"switch":"00:00:00:00:00:00:00:02", "name":"s2-src-h3-dst-h2", "eth_src":"00:00:00:00:00:03", "eth_dst":"00:00:00:00:00:02", "active":"true", "actions":"output=1"}' http://localhost:8080/wm/staticentrypusher/json
 curl -X POST -d '{"switch":"00:00:00:00:00:00:00:02", "name":"s2-src-h4-dst-h2", "eth_src":"00:00:00:00:00:04", "eth_dst":"00:00:00:00:00:02", "active":"true", "actions":"output=1"}' http://localhost:8080/wm/staticentrypusher/json
+curl -X POST -d '{"switch":"00:00:00:00:00:00:00:02", "name":"s2-src-h3-dst-h4", "eth_src":"00:00:00:00:00:03", "eth_dst":"00:00:00:00:00:04", "active":"true", "actions":"output=2"}' http://localhost:8080/wm/staticentrypusher/json
+curl -X POST -d '{"switch":"00:00:00:00:00:00:00:02", "name":"s2-src-h4-dst-h3", "eth_src":"00:00:00:00:00:04", "eth_dst":"00:00:00:00:00:03", "active":"true", "actions":"output=3"}' http://localhost:8080/wm/staticentrypusher/json
 
 
 # ARP forwarding
