@@ -10,8 +10,12 @@ Ping operates by sending **Internet Control Message Protocol (ICMP)** echo reque
 three pings from host 1 to host 2
 
 # Task1.2
+- 
 
 # Task1.3 Extended VLANs
+- 這題不是要我們去實作arp，也不要我們利用vlan去控制封包轉法(因為h3, h4會在同一個網域,flooding會有問題！)
+- 助教特別提醒我們就是要綁mac
+
 - LAN vs. VLAN: 多個VLAN可以架在同一個physical LAN上面，透過在邊緣push, pop VLAN ID來判斷轉發的frame
 - 必須先執行, 才能install flow with REST-API
 /opt/floodlight/floodlight-noforwarding.sh
@@ -26,8 +30,6 @@ three pings from host 1 to host 2
 # Task1.4 Python API and ARP Caches
 mininet.net.Mininet.staticArp()
 Add all-pairs ARP entries to remove the need to handle broadcast.
-
-
 
 # 如何連到機器
 
@@ -108,6 +110,7 @@ vim .ssh/authorized_key
 - 鳥哥的基礎網路觀念: [http://linux.vbird.org/linux_server/0110network_basic.php#tcpip_network_arp][4]
 - 重要！！mini net walkthrough http://mininet.org/walkthrough/
 - Dpctl Documentation https://github.com/CPqD/ofsoftswitch13/wiki/Dpctl-Documentation
+- https://man7.org/linux/man-pages/man8/arp.8.html
 # Open Issue
 
 - [https://www.ssh.com/ssh/config/][2] 
