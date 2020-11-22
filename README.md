@@ -8,11 +8,12 @@ three pings from host 1 to host 2
 # Task1.2
 
 # Task1.3 Extended VLANs
-- LAN vs. VLAN
-
+- LAN vs. VLAN: 多個VLAN可以架在同一個physical LAN上面，透過在邊緣push, pop VLAN ID來判斷轉發的frame
+- 必須先執行, 才能install flow with REST-API
+/opt/floodlight/floodlight-noforwarding.sh
 
 # Task1.4 Python API and ARP Caches
-- ARP是屬於哪一層的？
+- ARP是屬於哪一層的？L2
 
 # 如何連到機器
 
@@ -91,7 +92,7 @@ vim .ssh/authorized_key
 # Reference
 - Introduction to MiniNet [https://github.com/mininet/mininet/wiki/Introduction-to-Mininet#what][3]
 - 鳥哥的基礎網路觀念: [http://linux.vbird.org/linux_server/0110network_basic.php#tcpip_network_arp][4]
-- mini net workthrough http://mininet.org/walkthrough/
+- 重要！！mini net walkthrough http://mininet.org/walkthrough/
 - Dpctl Documentation https://github.com/CPqD/ofsoftswitch13/wiki/Dpctl-Documentation
 # Open Issue
 
@@ -112,5 +113,5 @@ sudo mn --mac --switch ovsk --controller remote,port=6653 --custom ex1/task12top
 dpctl dump-flows
 
 - install之後就算是mn clean up 
-# linux command
+# 常用linux command
 - arp
