@@ -1,6 +1,9 @@
 
 
-
+# 知識點釐清
+- arp包長怎樣
+- ip包長跟樣
+- 實際上vlan是靠什麼控制的？
 # Task1.1
 - ping代表什麼意思？實際執行的是什麼?
 Ping operates by sending **Internet Control Message Protocol (ICMP)** echo request packets to the target host and waiting for an **ICMP echo reply**. 
@@ -111,6 +114,13 @@ vim .ssh/authorized_key
 - 重要！！mini net walkthrough http://mininet.org/walkthrough/
 - Dpctl Documentation https://github.com/CPqD/ofsoftswitch13/wiki/Dpctl-Documentation
 - https://man7.org/linux/man-pages/man8/arp.8.html
+
+- Computer Networks 清大課程
+- youtube playlist: [https://www.youtube.com/playlist?list=PL9jciz8qz_zxeXaMgy4Z77P7dKNRWegE0][5]
+- 中繼器 (Repeater)、集線器 (Hub)、橋接器 (Bridge)、交換器 (Switch) 原理與介紹
+- 開放式課程官網 : [http://ocw.nthu.edu.tw/ocw/index.php?page=course&cid=13&v][6]
+- 官網投影片：[http://gaia.cs.umass.edu/kurose-ross-ppt-6e/][7]
+
 # Open Issue
 
 - [https://www.ssh.com/ssh/config/][2] 
@@ -132,3 +142,9 @@ dpctl dump-flows
 - install之後就算是mn clean up 
 # 常用linux command
 - arp
+
+[5]: https://www.youtube.com/playlist?list=PL9jciz8qz_zxeXaMgy4Z77P7dKNRWegE0
+
+[6]: http://ocw.nthu.edu.tw/ocw/index.php?page=course&cid=13&v
+
+[7]: http://gaia.cs.umass.edu/kurose-ross-ppt-6e/
