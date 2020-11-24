@@ -2,7 +2,12 @@
 
 # 知識點釐清
 - arp包長怎樣
-- ip包長跟樣
+[http://www.networksorcery.com/enp/protocol/arp.htm][arp header]
+- ip packet
+![avatar](picture/ip-packet-header.png)
+![avatar](picture/ip-protocol-number.png)
+- ethernet frame
+![avatar](picture/ethernet-frame.png)
 - 實際上vlan是靠什麼控制的？
 # Task1.1
 - ping代表什麼意思？實際執行的是什麼?
@@ -148,3 +153,5 @@ dpctl dump-flows
 [6]: http://ocw.nthu.edu.tw/ocw/index.php?page=course&cid=13&v
 
 [7]: http://gaia.cs.umass.edu/kurose-ross-ppt-6e/
+
+[arp header]: http://www.networksorcery.com/enp/protocol/arp.htm
