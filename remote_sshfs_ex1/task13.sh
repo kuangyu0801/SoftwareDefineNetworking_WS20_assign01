@@ -31,7 +31,7 @@ curl -X POST -d '{"switch":"00:00:00:00:00:00:00:02", "name":"arp-request-s2-src
 curl -X POST -d '{"switch":"00:00:00:00:00:00:00:02", "name":"arp-request-s2-src-h3-dst-h2", "eth_type":"0x0806", "arp_opcode":"0x1", "arp_sha":"00:00:00:00:00:03", "active":"true", "actions":"output=1,output=2"}' http://localhost:8080/wm/staticentrypusher/json
 curl -X POST -d '{"switch":"00:00:00:00:00:00:00:02", "name":"arp-request-s2-src-h4-dst-h2", "eth_type":"0x0806", "arp_opcode":"0x1", "arp_sha":"00:00:00:00:00:04", "active":"true", "actions":"output=1,output=3"}' http://localhost:8080/wm/staticentrypusher/json
 
-# ARP echo
+# ARP reply
 # S1
 curl -X POST -d '{"switch":"00:00:00:00:00:00:00:01", "name":"arp-reply-s1-src-h2-dst-h3", "eth_type":"0x0806", "arp_opcode":"0x2", "arp_sha":"00:00:00:00:00:02", "arp_tha":"00:00:00:00:00:03", "active":"true", "actions":"output=1"}' http://localhost:8080/wm/staticentrypusher/json
 curl -X POST -d '{"switch":"00:00:00:00:00:00:00:01", "name":"arp-reply-s1-src-h2-dst-h4", "eth_type":"0x0806", "arp_opcode":"0x2", "arp_sha":"00:00:00:00:00:02", "arp_tha":"00:00:00:00:00:04", "active":"true", "actions":"output=1"}' http://localhost:8080/wm/staticentrypusher/json
