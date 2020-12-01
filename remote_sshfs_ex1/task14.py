@@ -28,6 +28,18 @@ h41=net.addHost('h41', ip='10.10.4.1/8', mac='00:00:00:00:00:41')
 h42=net.addHost('h42', ip='10.10.4.2/8', mac='00:00:00:00:00:42')
 h43=net.addHost('h43', ip='10.10.4.3/8', mac='00:00:00:00:00:43')
 
+#h11=net.addHost('h11', ip='10.10.1.1/8')
+#h12=net.addHost('h12', ip='10.10.1.2/8')
+#h13=net.addHost('h13', ip='10.10.1.3/8')
+
+#h21=net.addHost('h21', ip='10.10.2.1/8')
+#h22=net.addHost('h22', ip='10.10.2.2/8')
+#h23=net.addHost('h23', ip='10.10.2.3/8')
+
+#h41=net.addHost('h41', ip='10.10.4.1/8')
+#h42=net.addHost('h42', ip='10.10.4.2/8')
+#h43=net.addHost('h43', ip='10.10.4.3/8')
+
 #! DONE: add switches
 s1=net.addSwitch('s1')
 s2=net.addSwitch('s2')
